@@ -43,5 +43,6 @@ async function convertToTime(unix) {
   return `${date.getHours()}:${date.getMinutes()}`;
 }
 
+// Get Weather Data
 app.get('/getWeatherData/:zipcode', async (req, res) => res.json(await getWeatherData(req.params.zipcode)));
 app.listen(PORT, () => console.log(`Server listening in port ${PORT}`))
